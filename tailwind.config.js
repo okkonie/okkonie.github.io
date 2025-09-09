@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: "var(--font-inter)",
+        lato: "var(--font-lato)",
+        "open-sans": "var(--font-open-sans)",
+        outfit: "var(--font-outfit)",
+        sen: "var(--font-sen)",
+        "bricolage-grotesque": "var(--font-bricolage-grotesque)",
+      },
+    },
   },
   plugins: [],
 }
