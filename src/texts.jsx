@@ -16,25 +16,21 @@ const texts = () => {
   }
 
   return {
-    name: "Hi! I'm Okko,",
-    title: "a software developer",
+    name: "Hey! I'm Okko",
+    title1: "a software",
+    title2: "developer",
     desc: `
       I am a ${calculateAge()} year old Computer Science student at University of Oulu, Finland. I'm eager to create 
-      intuitive and visually engaging user experiences. As of now I've mostly focused on frontend but I'm always 
+      intuitive and visually engaging user experiences. As of now I've mostly focused on frontend mobile and web applications but I'm always 
       ready to add new technologies to my skillset.
     `,
-    age: `${calculateAge()} y/o`,
-    location: "Oulu, Finland",
-    study: "University of Oulu, Computer Science",
-    email: "okko.niemikorpi@gmail.com",
     looking: true,
-    socials: {
-      gmail: "mailto:okko.niemikorpi@gmail.com",
-      github: "https://github.com/okkonie",
-      linkedin: "https://www.linkedin.com/in/okkoniemikorpi/"
-    },
+    mail: "okko.niemikorpi@gmail.com",
+    mailto: "mailto:okko.niemikorpi@gmail.com",
+    github: "https://github.com/okkonie",
+    linkedin: "https://www.linkedin.com/in/okkoniemikorpi/",
     skills: [
-      "reactnative",
+      "react native",
       "python",
       "react",
       "javascript",
