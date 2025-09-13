@@ -1,19 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  darkMode: "class",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        gradzy: "var(--font-gradzy)",
         inter: "var(--font-inter)",
-        lato: "var(--font-lato)",
-        "open-sans": "var(--font-open-sans)",
-        outfit: "var(--font-outfit)",
-        sen: "var(--font-sen)",
-        "bricolage-grotesque": "var(--font-bricolage-grotesque)",
+        poppins: "var(--font-poppins)"
       },
+      colors: {
+        bg:       "rgb(var(--bg) / <alpha-value>)",
+        dbg: "rgb(var(--dbg) / <alpha-value>)",
+        text:     "rgb(var(--text) / <alpha-value>)",
+        text2:    "rgb(var(--text2) / <alpha-value>)",
+      }
     },
   },
   plugins: [],

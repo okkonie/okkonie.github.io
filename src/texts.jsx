@@ -16,11 +16,10 @@ const texts = () => {
   }
 
   return {
-    name: "Hey! I'm Okko",
-    title1: "a software",
-    title2: "developer",
+    title1: "Frontend developer",
+    title2: "& CS student",
     desc: `
-      I am a ${calculateAge()} year old Computer Science student at University of Oulu, Finland. I'm eager to create 
+      Hey! I'm Okko, a ${calculateAge()} year old Computer Science student at University of Oulu, Finland. I'm eager to create 
       intuitive and visually engaging user experiences. As of now I've mostly focused on frontend mobile and web applications but I'm always 
       ready to add new technologies to my skillset.
     `,
