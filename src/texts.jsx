@@ -36,7 +36,15 @@ const texts = () => {
       "tailwind",
       "css",
       "ai"
-    ]
+    ], 
+    projects: [
+      {
+        title: "whenhl",
+        langs: ["react native", "tailwind"],
+        image: "/images/whenhl.png",
+        link: "https://github.com/okkonie/whenhl"
+      },
+    ],
   };
 };
 

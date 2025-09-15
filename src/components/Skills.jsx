@@ -7,7 +7,7 @@ export default function Skills() {
       <div className="flex flex-col flex-wrap justify-end">
         {texts.skills.map((skill, index) => (
           <div key={index} className="text-text px-5 py-2 rounded-md text-sm md:text-base text-end">
-            {skill}
+            <h2>{skill}</h2>
           </div>
         ))}
       </div>

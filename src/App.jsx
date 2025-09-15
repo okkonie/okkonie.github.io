@@ -1,5 +1,4 @@
 import Hero from "./components/Hero";
-import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
@@ -10,7 +9,6 @@ export default function App() {
     min-h-screen font-poppins
     selection:bg-text selection:text-bg"
     >
-      <NavBar />
       <Hero />
       <Projects />
       <Skills />
