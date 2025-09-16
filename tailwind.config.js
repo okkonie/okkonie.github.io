@@ -5,17 +5,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: "var(--font-inter)",
         poppins: "var(--font-poppins)"
       },
       colors: {
-        bg:       "rgb(var(--bg) / <alpha-value>)",
+        bg: "rgb(var(--bg) / <alpha-value>)",
         dbg: "rgb(var(--dbg) / <alpha-value>)",
-        text:     "rgb(var(--text) / <alpha-value>)",
-        text2:    "rgb(var(--text2) / <alpha-value>)",
+        text: "rgb(var(--text) / <alpha-value>)",
+        text2: "rgb(var(--text2) / <alpha-value>)",
       }
     },
   },
   plugins: [],
 }
-
