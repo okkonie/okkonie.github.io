@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoMdSunny, IoMdMoon } from "react-icons/io";
 
-export default function DarkThemeButton() {
+export default function ThemeSwitch() {
   const getSystemPref = () =>
     window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -44,7 +44,7 @@ export default function DarkThemeButton() {
 
   return (
     <button
-      className="fixed top-4 right-4 z-50 p-3 transition-colors duration-300 text-text"
+      className="p-3 transition-all duration-300 text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text/30 rounded-md"
       onClick={() => setDark((d) => !d)}
       aria-label="Toggle dark mode"
     >
