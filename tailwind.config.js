@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         bg: "rgb(var(--bg) / <alpha-value>)",
-        dbg: "rgb(var(--dbg) / <alpha-value>)",
+        sep: "rgb(var(--sep) / <alpha-value>)",
         text: "rgb(var(--text) / <alpha-value>)",
         text2: "rgb(var(--text2) / <alpha-value>)",
       }

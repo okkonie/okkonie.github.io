@@ -16,12 +16,11 @@ const texts = () => {
   }
 
   return {
-    intro: "HEY! I AM",
     name: "okko niemikorpi",
+    intro: "Hey! I am Okko.",
     desc: `
-      A ${calculateAge()}-year-old developer studying Computer Science at the University of Oulu, Finland, with a strong interest in crafting intuitive and visually engaging digital experiences. 
+      A ${calculateAge()}-year-old developer studying Computer Science at the University of Oulu, Finland, with a strong interest in crafting intuitive and visually engaging digital experiences leveraging AI and other up to date technologies. 
       Most of my projects have focused on frontend development for web and mobile, although I am always ready to broaden my skillset and explore new technologies. 
-      Lately, I have been exploring ways to make the most of AI in my development processes.
     `,
     looking: true,
     mail: "okko.niemikorpi@gmail.com",
