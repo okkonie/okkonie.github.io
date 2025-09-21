@@ -39,7 +39,7 @@ export default function ThemeSwitch() {
   const inactive = "bg-transparent hover:bg-text/10";
 
   return (
-    <div role="group" aria-label="Theme" className="inline-flex gap-1 w-full justify-end pt-10">
+    <div role="group" aria-label="Theme" className="inline-flex gap-1">
       <button
         type="button"
         onClick={() => setTheme("system")}

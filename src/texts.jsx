@@ -19,15 +19,16 @@ const texts = () => {
     intro: "Hey! I am Okko,",
     desc: `
       a ${calculateAge()}-year-old software developer studying Computer Science at the University of Oulu, Finland, 
-      with a strong interest in crafting intuitive and visually engaging digital experiences leveraging AI and other up to date technologies. 
+      with a strong interest in crafting intuitive and visually engaging digital experiences. 
       Most of my projects have focused on frontend web and mobile development, although I am always ready to broaden my skillset and explore new technologies. 
     `,
     looking: true,
     contacts: [
       {text: "email", link: "mailto:okko.niemikorpi@gmail.com"},
-      {text: "github", link: "https://github.com/okkonie"},
-      {text: "linkedin", link: "https://www.linkedin.com/in/okkoniemikorpi"}
+      {text: "linkedin", link: "https://www.linkedin.com/in/okkoniemikorpi"},
+      {text: "github", link: "https://github.com/okkonie"}
     ],
+    skillsHead: "Skills",
     skills: [
       "react native",
       "python",
