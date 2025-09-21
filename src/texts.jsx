@@ -16,17 +16,18 @@ const texts = () => {
   }
 
   return {
-    name: "okko niemikorpi",
-    intro: "Hey! I am Okko.",
+    intro: "Hey! I am Okko,",
     desc: `
-      A ${calculateAge()}-year-old developer studying Computer Science at the University of Oulu, Finland, with a strong interest in crafting intuitive and visually engaging digital experiences leveraging AI and other up to date technologies. 
-      Most of my projects have focused on frontend development for web and mobile, although I am always ready to broaden my skillset and explore new technologies. 
+      a ${calculateAge()}-year-old software developer studying Computer Science at the University of Oulu, Finland, 
+      with a strong interest in crafting intuitive and visually engaging digital experiences leveraging AI and other up to date technologies. 
+      Most of my projects have focused on frontend web and mobile development, although I am always ready to broaden my skillset and explore new technologies. 
     `,
     looking: true,
-    mail: "okko.niemikorpi@gmail.com",
-    mailto: "mailto:okko.niemikorpi@gmail.com",
-    github: "https://github.com/okkonie",
-    linkedin: "https://www.linkedin.com/in/okkoniemikorpi/",
+    contacts: [
+      {text: "email", link: "mailto:okko.niemikorpi@gmail.com"},
+      {text: "github", link: "https://github.com/okkonie"},
+      {text: "linkedin", link: "https://www.linkedin.com/in/okkoniemikorpi"}
+    ],
     skills: [
       "react native",
       "python",
@@ -35,7 +36,14 @@ const texts = () => {
       "tailwind",
       "css",
       "ai"
-    ], 
+    ],
+    projectsHead: "Some of my personal projects",
+    links: [
+      { label: "Home", target: "top" },
+      { label: "Projects", target: "projects" },
+      { label: "Skills", target: "skills" },
+      { label: "Contact", target: "contact" },
+    ],
     projects: [
       {
         title: "whenhl",
