@@ -16,7 +16,8 @@ const texts = () => {
   }
 
   return {
-    intro: "Hey! I am Okko,",
+    fisrtName: "OKKO",
+    lastName: "NIEMIKORPI",
     desc: `
       a ${calculateAge()}-year-old software developer studying Computer Science at the University of Oulu, Finland, 
       with a strong interest in crafting intuitive and visually engaging digital experiences. 

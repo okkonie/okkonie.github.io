@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: "var(--font-poppins)",
+        zalando: "Var(--font-zalando)"
       },
       colors: {
         bg: "rgb(var(--bg) / <alpha-value>)",

@@ -10,7 +10,7 @@ export default function Links() {
           aria-label={`${text} link`}
           target="_blank"
           rel="noopener noreferrer"
-          className="py-2.5 pl-2.5 text-sm hover:tracking-widest transition-[letter-spacing] duration-200 text-end"
+          className="py-2.5 pl-2.5 text-sm hover:tracking-widest transition-[letter-spacing] duration-200"
         >
           {text}
         </a>

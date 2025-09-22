@@ -39,29 +39,28 @@ export default function App() {
       <main
         id="smooth-content"
         className="
-          flex flex-col text-text w-full px-4 md:px-16 lg:px-24
+          flex flex-col text-text w-full
           relative min-h-screen font-poppins transition-colors duration-300
           selection:bg-text selection:text-bg"
       > 
         <section className="
-            w-full relative flex flex-col sm:min-h-[50dvh] justify-between
-            overflow-hidden
+            w-full relative flex flex-col sm:min-h-dvh justify-between
+            overflow-hidden p-4 md:p-6 lg:p-10
         "> 
-          <div className="w-full flex justify-end pt-10"> 
-            <ThemeSwitch /> 
+          <div className="w-full flex justify-between"> 
+            <p className="text-[7.5vw] font-zalando font-semibold">{texts.fisrtName}</p>
+            <div className="flex flex-col items-start self-end">
+              <p className="text-[7.5vw] font-zalando font-semibold">{texts.lastName}</p>
+              <p className="
+                text-sm sm:text-base tracking-wide hidden xl:flex flex-1 pt-32 pb-24 font-light
+                leading-normal sm:leading-normal max-w-3xl flex-col justify-center
+              ">
+                {texts.desc}
+              </p>
+            </div>
           </div>
 
-          <p className="
-            text-base sm:text-lg tracking-wide flex flex-1 font-light pt-32 pb-24
-            leading-normal sm:leading-normal max-w-3xl flex-col justify-center
-          ">
-            <span className="leading-[3] sm:leading-[3]">{texts.intro}<br/></span>
-            {texts.desc}
-          </p>
-
-          <div className="flex w-full justify-end">
-            <Links />
-          </div>
+          <Links />
 
         </section>
 
