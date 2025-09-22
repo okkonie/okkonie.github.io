@@ -39,15 +39,7 @@ export default function ThemeSwitch() {
   const inactive = "bg-transparent hover:bg-text/10";
 
   return (
-    <div role="group" aria-label="Theme" className="inline-flex gap-1">
-      <button
-        type="button"
-        onClick={() => setTheme("system")}
-        aria-pressed={theme === "system"}
-        className={`${base} ${theme === "system" ? active : inactive}`}
-      >
-        <MdComputer />
-      </button>
+    <div role="group" aria-label="Theme" className="flex flex-col gap-1">
       <button
         type="button"
         onClick={() => setTheme("light")}
@@ -63,6 +55,14 @@ export default function ThemeSwitch() {
         className={`${base} ${theme === "dark" ? active : inactive}`}
       >
         <MdDarkMode />
+      </button>
+      <button
+        type="button"
+        onClick={() => setTheme("system")}
+        aria-pressed={theme === "system"}
+        className={`${base} ${theme === "system" ? active : inactive}`}
+      >
+        <MdComputer />
       </button>
     </div>
   );

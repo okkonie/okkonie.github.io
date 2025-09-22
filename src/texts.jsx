@@ -19,9 +19,9 @@ const texts = () => {
     fisrtName: "OKKO",
     lastName: "NIEMIKORPI",
     desc: `
-      a ${calculateAge()}-year-old software developer studying Computer Science at the University of Oulu, Finland, 
-      with a strong interest in crafting intuitive and visually engaging digital experiences. 
-      Most of my projects have focused on frontend web and mobile development, although I am always ready to broaden my skillset and explore new technologies. 
+      I am a ${calculateAge()}-year-old frontend developer studying Computer Science at the University of Oulu, Finland 
+      with a strong interest in crafting intuitive and visually engaging applications 
+      while constantly finding ways to broaden my skillset and explore new technologies. 
     `,
     looking: true,
     contacts: [

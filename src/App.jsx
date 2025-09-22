@@ -44,23 +44,22 @@ export default function App() {
           selection:bg-text selection:text-bg"
       > 
         <section className="
-            w-full relative flex flex-col sm:min-h-dvh justify-between
+            w-full relative flex flex-col sm:min-h-[70svh] justify-between
             overflow-hidden p-4 md:p-6 lg:p-10
         "> 
-          <div className="w-full flex justify-between"> 
-            <p className="text-[7.5vw] font-zalando font-semibold">{texts.fisrtName}</p>
-            <div className="flex flex-col items-start self-end">
-              <p className="text-[7.5vw] font-zalando font-semibold">{texts.lastName}</p>
-              <p className="
-                text-sm sm:text-base tracking-wide hidden xl:flex flex-1 pt-32 pb-24 font-light
-                leading-normal sm:leading-normal max-w-3xl flex-col justify-center
-              ">
+          <div>
+            <div className="flex justify-between"> 
+              <p className="text-[clamp(2rem,8vw,10rem)] font-zalando font-semibold leading-[0.75]">{texts.fisrtName}</p>
+              <p className="text-[clamp(2rem,8vw,10rem)] font-zalando font-semibold leading-[0.75]">{texts.lastName}</p>
+            </div>
+            <Links />
+          </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-end pt-36">  
+              <p className="font-light sm:text-lg xl:text-xl max-w-2xl">
                 {texts.desc}
               </p>
             </div>
-          </div>
-
-          <Links />
 
         </section>
 
