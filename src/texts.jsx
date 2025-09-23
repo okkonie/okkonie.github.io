@@ -24,11 +24,9 @@ const texts = () => {
       while constantly finding ways to broaden my skillset and explore new technologies. 
     `,
     looking: true,
-    contacts: [
-      {text: "email", link: "mailto:okko.niemikorpi@gmail.com"},
-      {text: "linkedin", link: "https://www.linkedin.com/in/okkoniemikorpi"},
-      {text: "github", link: "https://github.com/okkonie"}
-    ],
+    email: {text: "email", link: "mailto:okko.niemikorpi@gmail.com"},
+    linkedin: {text: "linkedin", link: "https://www.linkedin.com/in/okkoniemikorpi"},
+    github: {text: "github", link: "https://github.com/okkonie"},
     skillsHead: "Skills",
     skills: [
       "react native",
@@ -39,13 +37,7 @@ const texts = () => {
       "css",
       "ai"
     ],
-    projectsHead: "Some of my personal projects",
-    links: [
-      { label: "Home", target: "top" },
-      { label: "Projects", target: "projects" },
-      { label: "Skills", target: "skills" },
-      { label: "Contact", target: "contact" },
-    ],
+    projectsHead: "Personal projects",
     projects: [
       {
         title: "whenhl",

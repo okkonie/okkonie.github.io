@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
-import { MdComputer, MdLightMode, MdDarkMode } from "react-icons/md";
+import { HiSun, HiMoon } from "react-icons/hi";
+
 
 function useTheme() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "system");
+
+  const getResolved = () => {
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    return theme === "system" ? (mql.matches ? "dark" : "light") : theme;
+  };
 
   useEffect(() => {
     const mql = window.matchMedia("(prefers-color-scheme: dark)");
@@ -29,40 +35,35 @@ function useTheme() {
     }
   }, [theme]);
 
-  return { theme, setTheme };
+  return { theme, setTheme, resolvedTheme: getResolved() };
 };
 
+// removed custom SVG icon; using react-icons with crossfade instead
+
 export default function ThemeSwitch() {
-  const { theme, setTheme } = useTheme();
-  const base = "inline-flex items-center rounded size-7 justify-center text-sm transition-colors";
-  const active = "bg-text text-bg";
-  const inactive = "bg-transparent hover:bg-text/10";
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   return (
-    <div role="group" aria-label="Theme" className="flex flex-col gap-1">
+    <div aria-label="Theme" className="flex">
       <button
         type="button"
-        onClick={() => setTheme("light")}
-        aria-pressed={theme === "light"}
-        className={`${base} ${theme === "light" ? active : inactive}`}
+        onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+        aria-pressed={resolvedTheme === 'dark'}
+        className="
+          inline-flex items-center rounded size-10 justify-center 
+          text-sm transition-transform duration-200 bg-transparent hover:scale-110
+        "
       >
-        <MdLightMode />
-      </button>
-      <button
-        type="button"
-        onClick={() => setTheme("dark")}
-        aria-pressed={theme === "dark"}
-        className={`${base} ${theme === "dark" ? active : inactive}`}
-      >
-        <MdDarkMode />
-      </button>
-      <button
-        type="button"
-        onClick={() => setTheme("system")}
-        aria-pressed={theme === "system"}
-        className={`${base} ${theme === "system" ? active : inactive}`}
-      >
-        <MdComputer />
+        <span className="relative inline-block size-5">
+          <HiSun
+            aria-hidden
+            className={`absolute inset-0 size-4 transition-opacity duration-200 ${resolvedTheme === 'dark' ? 'opacity-0' : 'opacity-100'}`}
+          />
+          <HiMoon
+            aria-hidden
+            className={`absolute inset-0 size-4 transition-opacity duration-200 ${resolvedTheme === 'dark' ? 'opacity-100' : 'opacity-0'}`}
+          />
+        </span>
       </button>
     </div>
   );
