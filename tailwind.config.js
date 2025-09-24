@@ -5,8 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: "var(--font-poppins)",
-        zalando: "Var(--font-zalando)"
+        montserrat: "var(--font-montserrat)",
       },
       colors: {
         bg: "rgb(var(--bg) / <alpha-value>)",

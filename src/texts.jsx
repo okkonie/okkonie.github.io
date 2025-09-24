@@ -16,11 +16,11 @@ const texts = () => {
   }
 
   return {
-    fisrtName: "OKKO",
-    lastName: "NIEMIKORPI",
+    firstName: "Okko",
+    lastName: "Niemikorpi",
     desc: `
-      I am a ${calculateAge()}-year-old frontend developer studying Computer Science at the University of Oulu, Finland 
-      with a strong interest in crafting intuitive and visually engaging applications 
+      a ${calculateAge()} y/o frontend developer studying Computer Science at the University of Oulu, Finland 
+      with a strong interest in crafting innovative, functional and visually engaging applications 
       while constantly finding ways to broaden my skillset and explore new technologies. 
     `,
     looking: true,
@@ -38,14 +38,15 @@ const texts = () => {
       "ai"
     ],
     projectsHead: "Personal projects",
-    projects: [
-      {
+    projects: {
+      whenhl: {
         title: "whenhl",
         langs: ["react native", "tailwind"],
         image: "/images/whenhl.png",
+        desc: "nhl related mobile app",
         link: "https://github.com/okkonie/whenhl"
       },
-    ],
+    },
   };
 };
 

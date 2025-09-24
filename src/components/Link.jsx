@@ -13,7 +13,7 @@ export default function Link({text, link}) {
         flex hover:tracking-widest transition-[letter-spacing] duration-200
       "
     >
-      <span className="inline-flex w-full items-center justify-end">
+      <span className="inline-flex w-full items-center justify-start">
         <span>{text}</span>
         <LuArrowUpRight
           className="opacity-0 -translate-y-0.5 translate-x-0 transition-all duration-200 pointer-events-none group-hover:opacity-100 group-hover:translate-x-1"

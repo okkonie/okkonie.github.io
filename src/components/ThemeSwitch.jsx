@@ -41,7 +41,7 @@ function useTheme() {
 // removed custom SVG icon; using react-icons with crossfade instead
 
 export default function ThemeSwitch() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
     <div aria-label="Theme" className="flex">
@@ -50,8 +50,8 @@ export default function ThemeSwitch() {
         onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
         aria-pressed={resolvedTheme === 'dark'}
         className="
-          inline-flex items-center rounded size-10 justify-center 
-          text-sm transition-transform duration-200 bg-transparent hover:scale-110
+          inline-flex items-center rounded size-10 justify-end
+          text-sm transition-transform duration-200 bg-transparent
         "
       >
         <span className="relative inline-block size-5">
