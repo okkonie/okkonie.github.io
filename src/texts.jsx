@@ -18,20 +18,20 @@ const texts = () => {
   return {
     firstName: "Okko",
     lastName: "Niemikorpi",
-    desc: `
-      a ${calculateAge()} y/o frontend developer studying Computer Science at the University of Oulu, Finland 
+    header: `
+      Hey! I am Okko — a ${calculateAge()} y/o frontend developer studying Computer Science at the University of Oulu, Finland 
       with a strong interest in crafting innovative, functional and visually engaging applications 
       while constantly finding ways to broaden my skillset and explore new technologies. 
     `,
     looking: true,
-    email: {text: "email", link: "mailto:okko.niemikorpi@gmail.com"},
-    linkedin: {text: "linkedin", link: "https://www.linkedin.com/in/okkoniemikorpi"},
-    github: {text: "github", link: "https://github.com/okkonie"},
+    email: {text: "EMAIL", link: "mailto:okko.niemikorpi@gmail.com"},
+    linkedin: {text: "LINKEDIN", link: "https://www.linkedin.com/in/okkoniemikorpi"},
+    github: {text: "GITHUB", link: "https://github.com/okkonie"},
     skillsHead: "Skills",
     skills: [
       "react native",
       "python",
-      "react",
+      "react", 
       "javascript",
       "tailwind",
       "css",
