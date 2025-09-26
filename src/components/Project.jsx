@@ -1,9 +1,8 @@
-
 export default function({project}) {
 
   return(
     <div className="
-      w-full flex flex-col px-[2vw] sm:flex-row transition-colors duration-500 sticky top-10 gap-5 py-[2vw] sm:py-10 bg-bg
+      w-full flex flex-col sm:flex-row transition-colors duration-500 sticky top-10 py-5 gap-5 bg-bg
     ">
       
       <img src={project.image} alt={project.title} className="w-full sm:w-[300px] lg:w-[400px] rounded-sm" />
