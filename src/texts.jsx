@@ -16,10 +16,9 @@ const texts = () => {
   }
 
   return {
-    firstName: "Okko",
-    lastName: "Niemikorpi",
     header: `
-      Hey! I am Okko — a ${calculateAge()} y/o frontend developer studying Computer Science at the University of Oulu, Finland 
+      Hey! I am Okko — a ${calculateAge()} y/o frontend developer 
+      studying Computer Science at the University of Oulu, Finland 
       with a strong interest in crafting innovative, functional and visually engaging applications 
       while constantly finding ways to broaden my skillset and explore new technologies. 
     `,
@@ -27,7 +26,16 @@ const texts = () => {
     email: {text: "EMAIL", link: "mailto:okko.niemikorpi@gmail.com"},
     linkedin: {text: "LINKEDIN", link: "https://www.linkedin.com/in/okkoniemikorpi"},
     github: {text: "GITHUB", link: "https://github.com/okkonie"},
-    skillsHead: "Skills",
+    projectsHead: "PROJECTS",
+    projects: {
+      whenhl: {
+        title: "whenhl",
+        image: "/images/whenhl.png",
+        desc: "mobile ui that presents the data from nhl's public api",
+        link: "https://github.com/okkonie/whenhl"
+      },
+    },
+    skillsHead: "SKILLS",
     skills: [
       "react native",
       "python",
@@ -37,16 +45,6 @@ const texts = () => {
       "css",
       "ai"
     ],
-    projectsHead: "Personal projects",
-    projects: {
-      whenhl: {
-        title: "whenhl",
-        langs: ["react native", "tailwind"],
-        image: "/images/whenhl.png",
-        desc: "nhl related mobile app",
-        link: "https://github.com/okkonie/whenhl"
-      },
-    },
   };
 };
 

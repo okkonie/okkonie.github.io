@@ -2,25 +2,15 @@
 export default function({project}) {
 
   return(
-    <a 
-      className="w-full justify-between flex gap-5 transition-colors p-4 rounded-md duration-500"
-      href={project.link}
-    >
-      <div className="flex flex-col justify-between">
-        <div className="flex flex-col space-y-3">
-          <h3 className="text-lg font-semibold">{project.title}</h3>
-          <p className="text-sm text-text2 font-medium">{project.desc}</p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {project.langs.map((lang, i) => (
-            <p key={i} className="text-xs border border-text2 px-1.5 py-1 rounded">{lang}</p>
-            )
-          )}
-
-        </div>
-      </div>
+    <div className="
+      w-full flex flex-col px-[2vw] sm:flex-row transition-colors duration-500 sticky top-10 gap-5 py-[2vw] sm:py-10 bg-bg
+    ">
       
-      <img src={project.image} alt={project.title} className="w-[40%] rounded-sm"/>
-    </a>
+      <img src={project.image} alt={project.title} className="w-full sm:w-[300px] lg:w-[400px] rounded-sm" />
+      <div className="space-y-3 flex flex-col max-w-md pb-5">
+        <h3 className="text-lg font-bold">{project.title}</h3>
+        <p className="text-text2">{project.desc}</p>
+      </div>
+    </div>
   )
 }
