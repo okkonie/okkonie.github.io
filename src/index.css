@@ -8,7 +8,7 @@
   --bg: 12 12 12;
   --sep: 25 25 25;
   --text: 255 255 255;
-  --text2: 155 155 155;
+  --text2: 160 160 160;
 }
 
 html, body {
@@ -17,28 +17,9 @@ html, body {
   -moz-osx-font-smoothing: grayscale;  /* Firefox on macOS */
   text-rendering: optimizeLegibility;  /* better kerning & ligatures */
   font-feature-settings: "kern", "liga", "clig", "calt"; /* high-quality OpenType */
-}
 
-@layer base {
-  html {
-    scrollbar-width: thin; /* auto | thin | none */
-    scrollbar-color: rgb(var(--text2)) rgb(var(--bg));
-    scroll-behavior: smooth;
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;   /* vertical scrollbar width */
-  }
-  ::-webkit-scrollbar-track {
-    background: rgb(var(--text) / 0.08);
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--text) / 0.35);
-    border-radius: 9999px;
-    border: 2px solid transparent;  /* creates padding */
-    background-clip: content-box;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(var(--text) / 0.5);
-  }
+  
+  scrollbar-width: thin; /* auto | thin | none */
+  scrollbar-color: rgb(var(--sep)) rgb(var(--bg));
+  scroll-behavior: smooth;
 }

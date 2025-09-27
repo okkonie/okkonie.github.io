@@ -32,6 +32,7 @@ const texts = () => {
         title: "whenhl",
         image: "/images/whenhl.png",
         desc: "mobile ui that presents the data from nhl's public api",
+        langs: ["react native", "tailwind"],
         link: "https://github.com/okkonie/whenhl"
       },
     },
