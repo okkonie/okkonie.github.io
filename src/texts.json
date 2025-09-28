@@ -1,0 +1,46 @@
+{
+  "beforeAgeText": "Hey! I am Okko — a ",
+  "birthDay": "1115337600",
+  "AfterAgeText": " y/o frontend developer studying Computer Science at the University of Oulu, Finland with a strong interest in crafting functional and visually engaging applications.",
+  "looking": true,
+  "email": {"text": "EMAIL", "link": "mailto:okko.niemikorpi@gmail.com"},
+  "linkedin": {"text": "LINKEDIN", "link": "https://www.linkedin.com/in/okkoniemikorpi"},
+  "github": {"text": "GITHUB", "link": "https://github.com/okkonie"},
+  "projectsHead": "PERSONAL PROJECTS",
+  "projects": [
+    {
+      "title": "whenhl",
+      "image": "/images/whenhl.png",
+      "desc": "a mobile ui built on top of nhl's public api with react native and tailwind",
+      "link": "https://github.com/okkonie/whenhl"
+    },
+    {
+      "title": "whenhl",
+      "image": "/images/whenhl.png",
+      "desc": "a mobile ui built on top of nhl's public api with react native and tailwind",
+      "link": "https://github.com/okkonie/whenhl"
+    },
+    {
+      "title": "whenhl",
+      "image": "/images/whenhl.png",
+      "desc": "a mobile ui built on top of nhl's public api with react native and tailwind",
+      "link": "https://github.com/okkonie/whenhl"
+    },
+    {
+      "title": "whenhl",
+      "image": "/images/whenhl.png",
+      "desc": "a mobile ui built on top of nhl's public api with react native and tailwind",
+      "link": "https://github.com/okkonie/whenhl"
+    }
+  ],
+  "skillsHead": "SKILLS",
+  "skills": [
+    "react native",
+    "python",
+    "react", 
+    "javascript",
+    "tailwind",
+    "css",
+    "ai"
+  ]
+}

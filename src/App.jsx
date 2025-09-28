@@ -1,8 +1,8 @@
-import texts from "./Texts";
+import texts from "./texts.json";
 import Link from "./components/Link";
 import Project from "./components/Project";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
@@ -14,24 +14,29 @@ export default function App() {
   useEffect(() => {
     let split;
     const run = () => {
-      split = new SplitText(".header", { type: "words" });
-      gsap.from(split.words, {
-        y: 20,
+      split = new SplitText(".header", { type: "lines" });
+      gsap.from(split.lines, {
+        yPercent: 100,
         autoAlpha: 0,
-        stagger: 0.01,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.1,
       });
     };
     if (document.fonts?.ready) document.fonts.ready.then(run);
     else run();
-
     return () => split?.revert();
   }, []);
 
+  const age = useMemo(
+    () => (t => new Date(Date.now() - (t < 1e12 ? t * 1000 : t)).getUTCFullYear() - 1970)(+texts.birthDay),
+    [texts.birthDay]
+  );
+
   return (
     <div className="
-      relative font-montserrat smooth-wrapper
-      w-full text-text bg-bg selection:bg-text 
-      selection:text-bg min-h-screen
+      min-h-screen flex flex-col w-full max-w-full 
+      relative text-text bg-bg selection:bg-text selection:text-bg font-funnel
     ">
       
       <div className="fixed top-0 z-10 flex w-full items-center justify-end h-10 bg-bg"> 
@@ -40,32 +45,48 @@ export default function App() {
         <Link link={texts.linkedin} />
       </div>
 
-      <main className="flex flex-col w-full relative smooth-content">
+      <section className="flex min-h-[50svh] overflow-hidden h-max p-p items-center">
+        <div className="max-w-4xl">
+          <p className="header text-base text-[clamp(1.5rem,3vw,2.3rem)] leading-[1.4] py-32">
+            {texts.beforeAgeText} 
+            {age}
+            {texts.AfterAgeText}
+          </p>
+        </div>
+      </section>
 
-        <header className="flex min-h-[70svh] overflow-hidden h-max p-3 sm:p-4 md:p-8 lg:p-10 xl:p-14 items-end">
-          <div className="max-w-xl">
-            <p className="header text-base sm:text-lg lg:text-xl tracking-wider">
-              {texts.header}
-            </p>
-          </div>
-        </header>
 
-        <section 
-          id="projects" 
-          className="border-t border-sep relative p-3 sm:p-4 md:p-8 lg:p-10 xl:p-14"
-        >
-          <h2 className="flex items-center text-text2 font-medium text-xl my-10">{texts.projectsHead}</h2>
-          <Project project={texts.projects.whenhl} />
-          <Project project={texts.projects.whenhl} />
-        </section>
+      <section 
+        id="projects" 
+        className="relative w-full p-p flex flex-col xl:flex-row xl:items-start justify-between gap-0 xl:gap-32"
+      >
+        <h2 className="sticky top-10 self-start font-medium text-base lg:text-lg text-text2 pt-5 pb-p">
+          {texts.projectsHead}
+        </h2>
 
-        <section 
-          id="skills" 
-          className="border-t border-sep p-3 sm:p-4 md:p-8 lg:p-10 xl:p-14"
-        >
-          <h2 className="flex items-center text-text2 font-medium text-xl">{texts.skillsHead}</h2>
-        </section>
-      </main>
+        <div className="flex flex-col flex-1 items-center">
+          {texts.projects.map((project, index) => (
+            <Project
+              key={index}
+              project={project}
+            />
+          ))}
+        </div>
+
+      </section>
+
+      <section 
+        id="skills" 
+        className="p-p"
+      >
+        <h2 className="
+          items-center font-medium text-base pr-10
+          lg:text-lg text-text2 pb-p sticky top-10 pt-5
+        ">
+          {texts.skillsHead}
+        </h2>
+      </section>
+
     </div>
   );
 }

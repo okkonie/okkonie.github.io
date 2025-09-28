@@ -5,13 +5,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: "var(--font-montserrat)",
+        onest: ["Onest", "sans-serif"],
+        funnel: ["Funnel Display", "sans-serif"]
       },
       colors: {
         bg: "rgb(var(--bg) / <alpha-value>)",
         sep: "rgb(var(--sep) / <alpha-value>)",
         text: "rgb(var(--text) / <alpha-value>)",
         text2: "rgb(var(--text2) / <alpha-value>)",
+      },
+      padding: {
+        p: "var(--p)"
       }
     },
   },

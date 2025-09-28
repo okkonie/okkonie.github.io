@@ -9,8 +9,8 @@ export default function Link({link}) {
       target="_blank"
       rel="noopener noreferrer"
       className="
-        group text-xs font-medium sm:text-sm w-32 sm:w-40 justify-center items-center
-        flex hover:tracking-widest transition-[letter-spacing] duration-200 pr-3 sm:pr-4 md:pr-8 lg:pr-10 xl:pr-14 h-10
+        group text-xs font-normal sm:text-sm w-32 sm:w-40 justify-center items-center
+        flex hover:tracking-widest transition-[letter-spacing] duration-200 pr-p h-10
       "
     >
       <span className="inline-flex w-full items-center justify-end">
